@@ -2,19 +2,20 @@
 Short script calculating sqrt
 """
 import sys
+import urllib.request
+
 
 def main():
     args = sys.argv[1:]
-    print(args)
-    try:
-        urls = int(args[0])
-        sys.exit(1)
-    except IndexError:
-        print('Please provide at least one url')
-        sys.exit(1)
-    except ValueError:
-        print('Please provide an integer number ./main.py number')
-        sys.exit(1)
+    urls = args[0].split(',')
+    for url in urls:
+        try:
+            print(urllib.request.urlopen(url).read())
+        except ValueError:
+            print("Please provide valid urls")
+            sys.exit(0)
+
+
 
 
 if __name__ == '__main__':
