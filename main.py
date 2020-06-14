@@ -9,13 +9,13 @@ def main():
     try:
         num = int(args[0])
     except SyntaxError:
-        print('Please provide an integer number ./short_script.py number')
+        print('Please provide an integer number ./main.py number')
         sys.exit(1)
     except IndexError:
-        print('Please provide an integer number ./short_script.py number')
+        print('Please provide an integer number ./main.py number')
         sys.exit(1)
     except ValueError:
-        print('Please provide an integer number ./short_script.py number')
+        print('Please provide an integer number ./main.py number')
         sys.exit(1)
 
     for i in range(num):
