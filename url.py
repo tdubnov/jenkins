@@ -13,9 +13,7 @@ def main():
             print(urllib.request.urlopen(url).read())
         except ValueError:
             print("Please provide valid urls")
-            sys.exit(0)
-
-
+            sys.exit(1)
 
 
 if __name__ == '__main__':
