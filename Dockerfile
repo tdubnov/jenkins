@@ -1,3 +1,6 @@
 FROM python:3.6-jessie
 
-ENTRYPOINT ['python', '-u', 'main.py', '6']
+ADD . /jenkins
+WORKDIR /jenkins
+
+ENTRYPOINT ["python", "-u", "main.py", "6"]
