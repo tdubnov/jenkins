@@ -19,7 +19,7 @@ def main():
         sys.exit(1)
 
     for i in range(num):
-        print(i, math.sqrt(i))
+        print(i, i ** 2)
 
 
 if __name__ == '__main__':
